@@ -1,6 +1,3 @@
-/* ==========================================================================
-   RESET UNIVERSAL & BOX MODEL
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -20,15 +17,12 @@ body {
     padding: 20px;
 }
 
-/* ==========================================================================
-   LAYOUT CON FLEXBOX - HEADER Y NAV
-   ========================================================================== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #1565c0; /* Azul corporativo indicado en el lab */
+    background-color: #1565c0; 
     color: white;
 }
 
@@ -51,9 +45,6 @@ header nav ul li a.active {
     border-bottom: 2px solid white;
 }
 
-/* ==========================================================================
-   SECCIONES Y COMPONENTES
-   ========================================================================== */
 section {
     padding: 40px 0;
     margin-bottom: 20px;
@@ -66,7 +57,6 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Chips de habilidades en flex horizontal */
 .lista-habilidades {
     display: flex;
     flex-wrap: wrap;
@@ -82,9 +72,6 @@ h2 {
     font-weight: bold;
 }
 
-/* ==========================================================================
-   FLEXBOX: GRID DE TARJETA DE PROYECTOS
-   ========================================================================== */
 .tarjetas-grid {
     display: flex;
     flex-wrap: wrap;
@@ -103,14 +90,11 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
-/* Requisito de animación Hover */
 .tarjeta:hover {
     transform: translateY(-5px); 
     box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
 
-/* Botones */
 .btn {
     display: inline-block;
     background-color: #1565c0;
@@ -136,9 +120,6 @@ h2 {
     background-color: #424242;
 }
 
-/* ==========================================================================
-   DISEÑO DEL FORMULARIO (contacto.html)
-   ========================================================================== */
 .formulario-contacto fieldset {
     border: 1px solid #1565c0;
     padding: 30px;
@@ -191,9 +172,6 @@ h2 {
     gap: 15px;
 }
 
-/* ==========================================================================
-   LAYOUT CON FLEXBOX - FOOTER (3 Columnas)
-   ========================================================================== */
 footer {
     display: flex;
     justify-content: space-around;
