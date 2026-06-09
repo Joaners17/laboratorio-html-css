@@ -1,0 +1,212 @@
+/* ==========================================================================
+   RESET UNIVERSAL & BOX MODEL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Requisito excelente del Box Model */
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fcfcfc;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   LAYOUT CON FLEXBOX - HEADER Y NAV
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1565c0; /* Azul corporativo indicado en el lab */
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover, 
+header nav ul li a.active {
+    color: #ffffff;
+    border-bottom: 2px solid white;
+}
+
+/* ==========================================================================
+   SECCIONES Y COMPONENTES
+   ========================================================================== */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #1565c0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Chips de habilidades en flex horizontal */
+.lista-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+.chip {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    padding: 8px 16px;
+    border-radius: 20px; /* Clases reutilizables con border-radius */
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   FLEXBOX: GRID DE TARJETA DE PROYECTOS
+   ========================================================================== */
+.tarjetas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.tarjeta {
+    flex: 1 1 calc(33.333% - 24px); /* 3 columnas responsivas */
+    min-width: 280px;
+    max-width: 340px;
+    background: white;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Clases reutilizables con border-radius */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Requisito de animación Hover */
+.tarjeta:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    background-color: #1565c0;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0d47a1;
+}
+
+.btn-reset {
+    background-color: #757575;
+}
+.btn-reset:hover {
+    background-color: #424242;
+}
+
+/* ==========================================================================
+   DISEÑO DEL FORMULARIO (contacto.html)
+   ========================================================================== */
+.formulario-contacto fieldset {
+    border: 1px solid #1565c0;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.formulario-contacto legend {
+    padding: 0 10px;
+    color: #1565c0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto input[type="tel"],
+.formulario-contacto input[type="date"],
+.formulario-contacto select,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Focus estilado */
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
+    border-color: #1565c0;
+    outline: none;
+}
+
+.opciones-inline, .checkbox-inline {
+    margin: 15px 0;
+}
+
+.botones-form {
+    display: flex;
+    gap: 15px;
+}
+
+/* ==========================================================================
+   LAYOUT CON FLEXBOX - FOOTER (3 Columnas)
+   ========================================================================== */
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #212121; /* Fondo oscuro y texto claro */
+    color: #f5f5f5;
+    padding: 30px 20px;
+    margin-top: 50px;
+    text-align: center;
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
